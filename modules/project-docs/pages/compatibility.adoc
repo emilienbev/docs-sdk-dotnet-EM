@@ -181,7 +181,7 @@ It is best to upgrade either the SDK or the Couchbase version you are using.
 Although it does not contain new APIs, such as vector search and support for 7.6 feature set, it is most compatible with Server 7.6.0. until SDK 3.5.x is released in the near future.
 For compatibility of 3.4.11 - 3.4.15, please see https://issues.couchbase.com/browse/NCBC-3716[NCBC-3716].
 
-
+////
 If you are on SDK versions 3.4.11 - 3.4.15, we strongly encourage you to upgrade to .NET SDK v3.5.1+.
 While these versions will continue be compatible and supported with server 7.6.0, you may encounter timeout exceptions during rebalances under KV high workload.
 A workaround is to disable fast failover by setting `EnablePushConfig` to false in the `ExperimentalOptions` of the `ClusterOptions`:
@@ -197,6 +197,9 @@ var options = new ClusterOptions
 };
 options.Experiments.EnablePushConfig = false;
 ----
+
+////
+
 
 Note the https://www.couchbase.com/support-policy[End of Life dates^] for Couchbase Server and SDK versions.
 See the notes there for Support details.
