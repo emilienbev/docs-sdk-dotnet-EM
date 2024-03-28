@@ -34,6 +34,12 @@ https://packages.couchbase.com/clients/net/3.4/Couchbase-Net-Client-3.4.15.zip[D
 https://docs.couchbase.com/sdk-api/couchbase-net-client-3.4.15[API Reference] |
 https://www.nuget.org/packages/CouchbaseNetClient/3.4.15[Nuget]
 
+==== Known Issues
+
+* While 3.4.11 - 3.4.15 will continue be compatible and supported with server 7.6.0, you may encounter performance issues during rebalances under high KV workload.
+3.4.9 is the recommended version to use with Server 7.6 (and newer instances of Capella, using 7.6).
+Although it does not contain new APIs, such as vector search and support for 7.6 feature set, it is most compatible with Server 7.6.0. until SDK 3.5.x is released in the near future.
+
 ==== Fixed Issues
 
 * https://issues.couchbase.com/browse/NCBC-3599[NCBC-3599]: 
@@ -59,6 +65,12 @@ Version 3.4.14 is the fifteenth release of the 3.4 series.
 https://packages.couchbase.com/clients/net/3.4/Couchbase-Net-Client-3.4.14.zip[Download] |
 https://docs.couchbase.com/sdk-api/couchbase-net-client-3.4.14[API Reference] |
 https://www.nuget.org/packages/CouchbaseNetClient/3.4.14[Nuget]
+
+==== Known Issues
+
+* While 3.4.11 - 3.4.15 will continue be compatible and supported with server 7.6.0, you may encounter performance issues during rebalances under high KV workload.
+3.4.9 is the recommended version to use with Server 7.6 (and newer instances of Capella, using 7.6).
+Although it does not contain new APIs, such as vector search and support for 7.6 feature set, it is most compatible with Server 7.6.0. until SDK 3.5.x is released in the near future.
 
 ==== Fixed Issues
 
@@ -98,6 +110,12 @@ Version 3.4.13 is the fourteenth release of the 3.4 series.
 https://packages.couchbase.com/clients/net/3.4/Couchbase-Net-Client-3.4.13.zip[Download] |
 https://docs.couchbase.com/sdk-api/couchbase-net-client-3.4.13[API Reference] |
 https://www.nuget.org/packages/CouchbaseNetClient/3.4.13[Nuget]
+
+==== Known Issues
+
+* While 3.4.11 - 3.4.15 will continue be compatible and supported with server 7.6.0, you may encounter performance issues during rebalances under high KV workload.
+3.4.9 is the recommended version to use with Server 7.6 (and newer instances of Capella, using 7.6).
+Although it does not contain new APIs, such as vector search and support for 7.6 feature set, it is most compatible with Server 7.6.0. until SDK 3.5.x is released in the near future.
 
 ==== Fixed Issues
 
@@ -158,6 +176,12 @@ https://packages.couchbase.com/clients/net/3.4/Couchbase-Net-Client-3.4.12.zip[D
 https://docs.couchbase.com/sdk-api/couchbase-net-client-3.4.12[API Reference] |
 https://www.nuget.org/packages/CouchbaseNetClient/3.4.12[Nuget]
 
+==== Known Issues
+
+* While 3.4.11 - 3.4.15 will continue be compatible and supported with server 7.6.0, you may encounter performance issues during rebalances under high KV workload.
+3.4.9 is the recommended version to use with Server 7.6 (and newer instances of Capella, using 7.6).
+Although it does not contain new APIs, such as vector search and support for 7.6 feature set, it is most compatible with Server 7.6.0. until SDK 3.5.x is released in the near future.
+
 ==== Fixed Issues
 
 * https://issues.couchbase.com/browse/NCBC-3490[NCBC-3490]:
@@ -206,8 +230,13 @@ https://packages.couchbase.com/clients/net/3.4/Couchbase-Net-Client-3.4.11.zip[D
 https://docs.couchbase.com/sdk-api/couchbase-net-client-3.4.11[API Reference] |
 https://www.nuget.org/packages/CouchbaseNetClient/3.4.11[Nuget]
 
-==== Fixed Issues
+==== Known Issues
 
+* While 3.4.11 - 3.4.15 will continue be compatible and supported with server 7.6.0, you may encounter performance issues during rebalances under high KV workload.
+3.4.9 is the recommended version to use with Server 7.6 (and newer instances of Capella, using 7.6).
+Although it does not contain new APIs, such as vector search and support for 7.6 feature set, it is most compatible with Server 7.6.0. until SDK 3.5.x is released in the near future.
+
+==== Fixed Issues
 
 * https://issues.couchbase.com/browse/NCBC-3446[NCBC-3446]: 
 When passed as `readonly(true)`, Readonly Query was accepting `UPDATE` query and was updating the document in collection, when it should have failed.
@@ -257,9 +286,16 @@ The changes also help application start up speed in non-AOT cases.
 [#version-3-4-10]
 === Version 3.4.10 (03 Aug 2023)
 
-WARNING: v3.4.10 is incompatible with Server 7.6 and later -- do not use.
-This version of the SDK has been deprecated; use 3.4.11 or greater.
+[WARNING]
+====
+v3.4.10 is incompatible with Server 7.6 and later -- do not use.
+This version of the SDK has been deprecated; 
+3.4.9 is the recommended version to use with Server 7.6 (and newer instances of Capella, using 7.6).
+Although it does not contain new APIs, such as vector search and support for 7.6 feature set, it is most compatible with Server 7.6.0. until SDK 3.5.x is released in the near future.
+
+While 3.4.11 - 3.4.15 will continue be compatible and supported with server 7.6.0, you may encounter performance issues during rebalances under high KV workload.
 Details can be found in https://issues.couchbase.com/browse/NCBC-3724[NCBC-3724].
+====
 
 Version 3.4.10 is the eleventh release of the 3.4 series.
 
@@ -308,6 +344,9 @@ We have removed these NuGet dependencies for the .NET 6 Target, which will reduc
 === Version 3.4.9 (20 July 2023)
 
 Version 3.4.9 is the tenth release of the 3.4 series.
+
+3.4.9 is the recommended version to use with Server 7.6 (and newer instances of Capella, using 7.6).
+Although it does not contain new APIs, such as vector search and support for 7.6 feature set, it is most compatible with Server 7.6.0. until SDK 3.5.x is released in the near future.
 
 https://packages.couchbase.com/clients/net/3.4/Couchbase-Net-Client-3.4.9.zip[Download] |
 https://docs.couchbase.com/sdk-api/couchbase-net-client-3.4.9[API Reference] |
