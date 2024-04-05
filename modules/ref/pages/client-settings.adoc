@@ -216,7 +216,7 @@ If this method returns `true`, then the certificate will be accepted.
 Name: *With X509 Certificate Factory::
 ClusterOption: `WithX509CertificateFactory(ICertificateFactory)`
 +
-Default: `nul`l - if `null` it will be set internally by the default `CertificateFactory`.
+Default: `null` - if `null` it will be set internally by the default `CertificateFactory`.
 +
 Gets or sets the `ICertificateFactory` to provide client certificates during TLS authentication.
 Will set the `TlsEnabled` flag to true if called.
