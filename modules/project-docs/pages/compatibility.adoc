@@ -68,8 +68,9 @@ The {name-sdk} is tested and supported on the following OSs and platforms:
 * Oracle Linux 8 & 9.
 * Ubuntu (LTS) 20.04 (_Focal_) & 22.04 (_Jammy_).
 * Debian 10 (_Buster_), 11 (_Bullseye_), and Debian 12 (_Bookworm_).
-* SUSE Enterprise Linux 12 & 15
-* Alpine Linux 3.18 (_Oracle JDK only_).
+* SUSE Enterprise Linux 12 & 15.
+* Alpine Linux 3.18.
+// (_Oracle JDK only_).
 // -- but see <<alpine-linux-compatibility, workaround note below>>.
 
 [discrete]
@@ -161,19 +162,6 @@ It is best to upgrade either the SDK or the Couchbase version you are using.
 
 <1> If you are on SDK versions 3.4.11 - 3.4.15, we strongly encourage you to upgrade to .NET SDK v3.5.1+.
 While these versions will continue be compatible and supported with server 7.6.0, you may encounter timeout exceptions during rebalances under KV high workload.
-A workaround is to disable fast failover by setting `EnablePushConfig` to false in the `ExperimentalOptions` of the `ClusterOptions`:
-
-+
-[source,csharp]
-----
-var options = new ClusterOptions
-{
-    ConnectionString = "localhost"
-    UserName = "Administrator",
-    Password = "password",
-};
-options.Experiments.EnablePushConfig = false;
-----
 
 Note the https://www.couchbase.com/support-policy[End of Life dates^] for Couchbase Server and SDK versions.
 See the notes there for Support details.
@@ -218,7 +206,7 @@ include::{version-common}@sdk:shared:partial$capella.adoc[tag=cloud]
 
 | Vector Search
 2+| N/A
-| From SDK 3.5.0
+| From SDK 3.5.1
 |===
 
 
