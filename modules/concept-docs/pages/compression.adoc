@@ -60,7 +60,7 @@ clusterOptions.WithCompressionAlgorithm(myCompressionImplementation);
 
 [Note]
 ====
-Even when compression is turned `Off` server-side, Couchbase Server will decompress documents in memory, and store them recompressed on disk (using Snappy) (xref:7.1@server:learn:buckets-memory-and-storage/compression.adoc#compression-modes[see server compression docs]).
+Even when compression is turned `Off` server-side, Couchbase Server will decompress documents in memory, and store them recompressed on disk (using Snappy) xref:7.1@server:learn:buckets-memory-and-storage/compression.adoc#compression-modes[see server compression docs].
 
 It is therefore not recommended to implement a different compression algorithm than Snappy as this may very well cause data corruption.
 ====
@@ -117,13 +117,13 @@ The three modes in which compression can be used, "off", "passive" and "active",
 |===
 
 
-== Compression for .NET SDK 3.5.1 and below
+== Compression for .NET SDK 3.4.10 to 3.5.1
 
 https://github.com/brantburnett/Snappier[Snappier] is
 integrated with the https://github.com/couchbaselabs/Couchbase.Extensions[.NET Couchbase.Extensions Library].
 Since xref:project-docs:sdk-release-notes.adoc#version-3-4-10[.NET SDK 3.4.10], the .NET SDK has been able to work with external Snappy libraries as the setting for the Server flag `SnappyEverywhere` is now supported.
 
-Install Snappier with the https://github.com/couchbaselabs/Couchbase.Extensions[.NET Couchbase.Extensions Library],
+Install Snappier with the https://github.com/couchbaselabs/Couchbase.Extensions[.NET Couchbase.Extensions] Library,
 // See the https://github.com/brantburnett/Snappier[Snappier GitHub page] for information on installing the external Snappier library, or get it from https://www.nuget.org/packages/Snappier[NuGet].
 
 
