@@ -11,7 +11,7 @@ include::project-docs:partial$attributes.adoc[]
 
 [Note]
 ====
-From version 3.5.2, the .NET SDK enables compression by default using https://www.nuget.org/packages/Snappier[Snappier], a performance-focused C# port of https://github.com/google/snappy[Snappy] provided by https://btburnett.com/[Brant Burnett]. This was previously opt-in only via installing the corresponding https://www.nuget.org/packages/Couchbase.Extensions.Compression.Snappier/1.0.0-beta.1[Couchbase.Extensions] package.
+From version 3.5.2, the .NET SDK enables compression by default using https://www.nuget.org/packages/Snappier[Snappier], a performance-focused C# port of https://github.com/google/snappy[Snappy]. This was previously opt-in only via installing the corresponding https://www.nuget.org/packages/Couchbase.Extensions.Compression.Snappier/1.0.0-beta.1[Couchbase.Extensions] package.
 ====
 
 == Overview
