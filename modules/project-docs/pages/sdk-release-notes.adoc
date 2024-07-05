@@ -32,17 +32,17 @@ https://www.nuget.org/packages/CouchbaseNetClient/3.6.1[Nuget]
 
 ==== Fixed Issues
 
-* https://issues.couchbase.com/browse/NCBC-3791[NCBC-3791] -  BucketConfig version used to be compared against the latest applied config, not the latest one received.
+* https://issues.couchbase.com/browse/NCBC-3791[NCBC-3791]: BucketConfig version used to be compared against the latest applied config, not the latest one received.
 
-* https://issues.couchbase.com/browse/NCBC-3698[NCBC-3698] - Behaviour Breaking: 
+* https://issues.couchbase.com/browse/NCBC-3698[NCBC-3698]: Behaviour Breaking: 
 Manually setting ScopeName and/or CollectionName in the CollectionQueryIndexManager APIs' options will now throw an InvalidArgumentException.
 Previously, the SDK was ignoring the ScopeName and CollectionName in options instead of throwing InvalidArgumentException as per RFC.
 
-* https://issues.couchbase.com/browse/NCBC-3780[NCBC-3780] - Transactions: QueryContext is now copied when retrying SingleQueryTransactions.
+* https://issues.couchbase.com/browse/NCBC-3780[NCBC-3780]: Transactions: QueryContext is now copied when retrying SingleQueryTransactions.
 
 ==== Improvement
 
-* https://issues.couchbase.com/browse/NCBC-3798[NCBC-3798] - VectorSearch: Passing in empty vectors now throws InvalidArgumentException
+* https://issues.couchbase.com/browse/NCBC-3798[NCBC-3798]: VectorSearch: Passing in empty vectors now throws InvalidArgumentException
 
 
 === Version 3.6.0 (13 June 2024)
@@ -59,25 +59,38 @@ https://www.nuget.org/packages/CouchbaseNetClient/3.6.0[Nuget]
 
 ==== Fixed Issues
 
-* https://issues.couchbase.com/browse/NCBC-3572[NCBC-3572] - For management services, CancellationTokens are now more accurate to the operation's lifetime.
-* https://issues.couchbase.com/browse/NCBC-3702[NCBC-3702] - Stellar client: Use DefaultSerializer as default at Cluster level 
-* https://issues.couchbase.com/browse/NCBC-3760[NCBC-3760] - Fix an issue regarding passing an X509CertificateFactory in ClusterOptions.
-* https://issues.couchbase.com/browse/NCBC-3768[NCBC-3768] - Align Boolean search API to RFC.
-* https://issues.couchbase.com/browse/NCBC-3775[NCBC-3775] - IndexAlreadyExists is now properly thrown.
-* https://issues.couchbase.com/browse/NCBC-3785[NCBC-3785] - Transactions: DocumentMetadata deserialization fixed.
-* https://issues.couchbase.com/browse/NCBC-3789[NCBC-3789] - Update Release version tag in SDK Directory.Build.Props.
-* https://issues.couchbase.com/browse/NCBC-3794[NCBC-3794] - Remove infinite loop in ConfigPushHandler, causing high CPU usage.
+* https://issues.couchbase.com/browse/NCBC-3572[NCBC-3572]:
+For management services, CancellationTokens are now more accurate to the operation's lifetime.
+* https://issues.couchbase.com/browse/NCBC-3702[NCBC-3702]:
+Stellar client: Use DefaultSerializer as default at Cluster level 
+* https://issues.couchbase.com/browse/NCBC-3760[NCBC-3760]:
+Fix an issue regarding passing an X509CertificateFactory in ClusterOptions.
+* https://issues.couchbase.com/browse/NCBC-3768[NCBC-3768]:
+Align Boolean search API to RFC.
+* https://issues.couchbase.com/browse/NCBC-3775[NCBC-3775]:
+IndexAlreadyExists is now properly thrown.
+* https://issues.couchbase.com/browse/NCBC-3785[NCBC-3785]:
+Transactions: DocumentMetadata deserialization fixed.
+* https://issues.couchbase.com/browse/NCBC-3789[NCBC-3789]:
+Update Release version tag in SDK Directory.Build.Props.
+* https://issues.couchbase.com/browse/NCBC-3794[NCBC-3794]:
+Remove infinite loop in ConfigPushHandler, causing high CPU usage.
 
 ==== New Feature
 
-* https://issues.couchbase.com/browse/NCBC-3788[NCBC-3788] - Support for base64 encoded vector types.
+* https://issues.couchbase.com/browse/NCBC-3788[NCBC-3788]:
+Support for base64 encoded vector types.
 
 ==== Improvements
 
-* https://issues.couchbase.com/browse/NCBC-3771[NCBC-3771] - Refactor RetryOrcestrator for K/V operations to be clearer.
-* https://issues.couchbase.com/browse/NCBC-3792[NCBC-3792] - Optimize for larger InFlightOperationSet for high latency connections.
-* https://issues.couchbase.com/browse/NCBC-3796[NCBC-3796] - Update local build version to 3.6.0.
-* https://issues.couchbase.com/browse/NCBC-3797[NCBC-3797] - Update VectorSearch's InterfaceStability to Committed.
+* https://issues.couchbase.com/browse/NCBC-3771[NCBC-3771]:
+Refactor RetryOrcestrator for K/V operations to be clearer.
+* https://issues.couchbase.com/browse/NCBC-3792[NCBC-3792]:
+Optimize for larger InFlightOperationSet for high latency connections.
+* https://issues.couchbase.com/browse/NCBC-3796[NCBC-3796]:
+Update local build version to 3.6.0.
+* https://issues.couchbase.com/browse/NCBC-3797[NCBC-3797]:
+Update VectorSearch's InterfaceStability to Committed.
 
 
 
