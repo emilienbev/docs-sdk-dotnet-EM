@@ -22,6 +22,79 @@ We always recommend using the latest version of the SDK -- it contains all of th
 All patch releases for each dot minor release should be API compatible, and safe to upgrade;
 any changes to expected behavior are noted in the release notes that follow.
 
+=== Version 3.6.1 (3 July 2024)
+
+Version 3.6.1 is a hotfix release.
+
+https://packages.couchbase.com/clients/net/3.6/Couchbase-Net-Client-3.6.1.zip[Download] |
+https://docs.couchbase.com/sdk-api/couchbase-net-client-3.6.1[API Reference] |
+https://www.nuget.org/packages/CouchbaseNetClient/3.6.1[Nuget]
+
+==== Fixed Issues
+
+* https://issues.couchbase.com/browse/NCBC-3791[NCBC-3791]: BucketConfig version used to be compared against the latest applied config, not the latest one received.
+
+* https://issues.couchbase.com/browse/NCBC-3698[NCBC-3698]: Behaviour Breaking: 
+Manually setting ScopeName and/or CollectionName in the CollectionQueryIndexManager APIs' options will now throw an InvalidArgumentException.
+Previously, the SDK was ignoring the ScopeName and CollectionName in options instead of throwing InvalidArgumentException as per RFC.
+
+* https://issues.couchbase.com/browse/NCBC-3780[NCBC-3780]: Transactions: QueryContext is now copied when retrying SingleQueryTransactions.
+
+==== Improvement
+
+* https://issues.couchbase.com/browse/NCBC-3798[NCBC-3798]: VectorSearch: Passing in empty vectors now throws InvalidArgumentException
+
+
+=== Version 3.6.0 (13 June 2024)
+
+Version 3.6.0 is the first release of the 3.6 series.
+
+https://packages.couchbase.com/clients/net/3.6/Couchbase-Net-Client-3.6.0.zip[Download] |
+https://docs.couchbase.com/sdk-api/couchbase-net-client-3.6.0[API Reference] |
+https://www.nuget.org/packages/CouchbaseNetClient/3.6.0[Nuget]
+
+==== Known Issues
+
+* There is an edge case that can cause high CPU usage against Couchbase Server 7.6 and later. Users are advised to upgrade to 3.6.1.
+
+==== Fixed Issues
+
+* https://issues.couchbase.com/browse/NCBC-3572[NCBC-3572]:
+For management services, CancellationTokens are now more accurate to the operation's lifetime.
+* https://issues.couchbase.com/browse/NCBC-3702[NCBC-3702]:
+Stellar client: Use DefaultSerializer as default at Cluster level 
+* https://issues.couchbase.com/browse/NCBC-3760[NCBC-3760]:
+Fix an issue regarding passing an X509CertificateFactory in ClusterOptions.
+* https://issues.couchbase.com/browse/NCBC-3768[NCBC-3768]:
+Align Boolean search API to RFC.
+* https://issues.couchbase.com/browse/NCBC-3775[NCBC-3775]:
+IndexAlreadyExists is now properly thrown.
+* https://issues.couchbase.com/browse/NCBC-3785[NCBC-3785]:
+Transactions: DocumentMetadata deserialization fixed.
+* https://issues.couchbase.com/browse/NCBC-3789[NCBC-3789]:
+Update Release version tag in SDK Directory.Build.Props.
+* https://issues.couchbase.com/browse/NCBC-3794[NCBC-3794]:
+Remove infinite loop in ConfigPushHandler, causing high CPU usage.
+
+==== New Feature
+
+* https://issues.couchbase.com/browse/NCBC-3788[NCBC-3788]:
+Support for base64 encoded vector types.
+
+==== Improvements
+
+* https://issues.couchbase.com/browse/NCBC-3771[NCBC-3771]:
+Refactor RetryOrcestrator for K/V operations to be clearer.
+* https://issues.couchbase.com/browse/NCBC-3792[NCBC-3792]:
+Optimize for larger InFlightOperationSet for high latency connections.
+* https://issues.couchbase.com/browse/NCBC-3796[NCBC-3796]:
+Update local build version to 3.6.0.
+* https://issues.couchbase.com/browse/NCBC-3797[NCBC-3797]:
+Update VectorSearch's InterfaceStability to Committed.
+
+
+
+== .NET SDK 3.5 Releases
 
 === Version 3.6.0 (13 June 2024)
 
@@ -45,6 +118,9 @@ Version 3.5.2 is the third release of the 3.5 series.
 https://packages.couchbase.com/clients/net/3.5/Couchbase-Net-Client-3.5.2.zip[Download] |
 https://docs.couchbase.com/sdk-api/couchbase-net-client-3.5.2[API Reference] |
 https://www.nuget.org/packages/CouchbaseNetClient/3.5.2[Nuget]
+
+NOTE: Due to https://issues.couchbase.com/browse/NCBC-3794[NCBC-3794], it is recommended that all customers using Server 7.6 or later upgrade to SDK 3.6.1 or later immediately.
+
 
 ==== Fixed Issues
 
