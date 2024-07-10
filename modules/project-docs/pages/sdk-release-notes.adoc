@@ -38,7 +38,6 @@ https://www.nuget.org/packages/CouchbaseNetClient/3.6.1[Nuget]
 `BucketConfig` version used to be compared against the latest applied config, not the latest one received.
 
 * https://issues.couchbase.com/browse/NCBC-3698[NCBC-3698]:
-*Behaviour Breaking*: 
 Manually setting `ScopeName` and/or `CollectionName` in the `CollectionQueryIndexManager` API's options will now throw an `InvalidArgumentException`.
 Previously, the SDK was ignoring the `ScopeName` and `CollectionName` in options, instead of throwing `InvalidArgumentException` as per RFC.
 
