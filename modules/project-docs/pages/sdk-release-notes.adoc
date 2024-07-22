@@ -22,6 +22,21 @@ We always recommend using the latest version of the SDK -- it contains all of th
 All patch releases for each dot minor release should be API compatible, and safe to upgrade;
 any changes to expected behavior are noted in the release notes that follow.
 
+=== Version 3.5.3 (23 July 2024)
+
+Version 3.5.3 is the fourth release of the 3.5 series.
+
+https://packages.couchbase.com/clients/net/3.5/Couchbase-Net-Client-3.5.3.zip[Download] |
+https://docs.couchbase.com/sdk-api/couchbase-net-client-3.5.3[API Reference] |
+https://www.nuget.org/packages/CouchbaseNetClient/3.5.3[Nuget]
+
+==== Fixed Issues
+
+Microsoft disclosed a CVE affecting their System.Text.Json (STJ) library on the 9th of July 2024. This release upgrades STJ to the patched version in our SDK.
+
+* https://github.com/advisories/GHSA-hh2w-p6rv-4g7w[Microsoft CVE on GitHub]
+
+* https://issues.couchbase.com/browse/NCBC-3817[NCBC-3817]: Upgrade System.Text.Json to patched version.
 
 === Version 3.5.2 (3 May 2024)
 
