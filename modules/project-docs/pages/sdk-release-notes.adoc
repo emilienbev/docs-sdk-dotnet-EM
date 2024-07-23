@@ -161,7 +161,7 @@ https://packages.couchbase.com/clients/net/3.5/Couchbase-Net-Client-3.5.2.zip[Do
 https://docs.couchbase.com/sdk-api/couchbase-net-client-3.5.2[API Reference] |
 https://www.nuget.org/packages/CouchbaseNetClient/3.5.2[Nuget]
 
-NOTE: Owing to https://issues.couchbase.com/browse/NCBC-3794[NCBC-3794], it is recommended that all customers using Server 7.6 or later upgrade to SDK 3.6.1 or later immediately.
+NOTE: Owing to https://issues.couchbase.com/browse/NCBC-3794[NCBC-3794], it is recommended that all customers using Server 7.6 or later upgrade to SDK 3.5.3 or SDK 3.6.2 or later immediately.
 
 
 ==== Fixed Issues
