@@ -147,6 +147,11 @@ Microsoft disclosed a CVE affecting their System.Text.Json (STJ) library on the 
 
 * https://issues.couchbase.com/browse/NCBC-3817[NCBC-3817]: Upgrade System.Text.Json to patched version.
 
+This release also backports fixes brought to ConfigPushHandler in releases 3.6.0 and 3.6.1.
+
+* https://issues.couchbase.com/browse/NCBC-3811[NCBC-3811]: Backports ConfigPushHandler fixes to 3.5 branch
+(See also https://issues.couchbase.com/browse/NCBC-3791[NCBC-3791], https://issues.couchbase.com/browse/NCBC-3794[NCBC-3794])
+
 
 === Version 3.5.2 (3 May 2024)
 
